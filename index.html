@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notes App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Login Screen -->
+  <div id="login-screen" class="screen">
+    <div class="login-card">
+      <h1>🔒 Notes</h1>
+      <p>Enter the passphrase to continue</p>
+      <input type="password" id="passphrase-input" placeholder="Passphrase" autocomplete="off">
+      <button id="login-btn">Unlock</button>
+      <p id="login-error" class="error hidden">Incorrect passphrase. Try again.</p>
+    </div>
+  </div>
+
+  <!-- App Screen -->
+  <div id="app-screen" class="screen hidden">
+    <header>
+      <h1>📝 My Notes</h1>
+      <button id="logout-btn" title="Lock">🔒 Lock</button>
+    </header>
+
+    <div class="note-editor">
+      <input type="text" id="note-title" placeholder="Note title...">
+      <textarea id="note-body" placeholder="Write your note here..."></textarea>
+      <div class="editor-actions">
+        <button id="save-note-btn">💾 Save Note</button>
+        <button id="cancel-edit-btn" class="secondary hidden">Cancel</button>
+      </div>
+    </div>
+
+    <div class="search-bar">
+      <input type="text" id="search-input" placeholder="🔍 Search notes...">
+    </div>
+
+    <div id="notes-list"></div>
+    <p id="no-notes" class="muted hidden">No notes yet. Create your first one above!</p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
